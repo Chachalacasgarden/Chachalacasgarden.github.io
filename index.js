@@ -1,11 +1,6 @@
 const greeting = document.getElementById("greeting");
-greeting.style.textAlign = "center";
-greeting.style.marginTop = "1px";
 const username = window.prompt("What's your name? ", "Rosa");
-greeting.innerHTML = "Welcome to my website, " + username + "!";
-const centro = document.getElementById("centro");
-centro.style.textAlign = "center";
-const lower = document.getElementById("lower");
-lower.style.marginTop = "150px";
-const bajo = document.getElementById("bajo");
-bajo.style.marginTop = "100px";
+if (username && username.trim() !== "") { greeting.textContent = "Welcome to my website," + username.trim() + "!"; }
+else { greeting.textContent = "Welcome to my website!"; }
+
+

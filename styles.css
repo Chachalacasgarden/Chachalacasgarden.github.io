@@ -1,17 +1,10 @@
 body {
     background-color: white;
-    color: rgb(113, 25, 40);
+    color: rgb(28, 2, 52);
     margin: 0;
     padding: 0;
     width: 100%;
     font-family: sans-serif;
-}
-
-h1,
-h2,
-h3 {
-    font-family: georgia, serif;
-
 }
 
 h1,
@@ -26,33 +19,34 @@ h3 {
 }
 
 header {
-    background-color: rgb(113, 25, 40);
+    background-color: rgb(28, 2, 52);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     color: WHITE;
     width: 100%;
-    min-height: 150%;
+    min-height: 150px;
     padding: 20px;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 header img {
-    width: 50%;
-    height: 50%;
     object-fit: cover;
 }
 
 footer {
     width: 100%;
     padding: 20px;
-    background-color: rgb(113, 25, 40);
+    background-color: rgb(28, 2, 52);
     box-sizing: border-box;
 }
 
 main {
     width: 100%;
-    max-width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
     overflow-wrap: break-word;
 
@@ -76,7 +70,10 @@ main {
 
 
 .dist {
-    margin-top: 200px;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .portfolio-picture {
@@ -88,11 +85,13 @@ main {
 }
 
 #greeting {
-    background-color: rgb(113, 25, 40);
+    background-color: rgb(28, 2, 52);
     color: white;
-    width: 1457;
+    width: 100%;
     padding: 20px;
     font-size: large;
+    text-align: center;
+    margin-top: 1px;
 }
 
 
@@ -105,7 +104,7 @@ main {
 }
 
 .behind {
-    background-image: url(images/egor-litvinov-UL2aUoICw6w-unsplash.jpg);
+    background-image: url(images/rick-rothenberg-F2LkrSjPz1g-unsplash.jpg);
     background-size: cover;
     background-position: center;
     min-height: 600px;
@@ -113,14 +112,42 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1645px;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
     padding-bottom: 80px;
 
 }
 
 .readable {
     font-family: Arial, sans-serif;
-    color: rgb(113, 25, 40);
+    color: rgb(3, 0, 5);
     font-size: 30px;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 0.5px black;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .readable {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .behind video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .port-pic-left {
+        width: 60px;
+        height: 60px;
+    }
 }
